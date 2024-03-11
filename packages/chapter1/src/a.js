@@ -1,3 +1,4 @@
+// TODO: 화요일까지
 /**
  * ## 문제 A
  * 
@@ -34,12 +35,45 @@ function JuniorEngineer(health, intelligence) {
 // 여기에 코드를 작성하세요
 // TO-DO
 //- 여기에 코드를 작성하세요
+Worker.prototype.getHealth = function () {
+  return this._health;
+}
+
+Worker.prototype.work = function () {
+  this._health--;
+}
+
+// 1번
+// JuniorEngineer.prototype = Object.create(Worker.prototype);
+
+// 2번
+JuniorEngineer.prototype = new Worker();
+
+// 1번
+// JuniorEngineer.prototype._super = function (health) {
+//   Worker.call(this, health);
+// }
+
+// 2번
+JuniorEngineer.prototype._super = function () {
+  Worker.apply(this, arguments);
+}
+
+JuniorEngineer.prototype.getIntelligence = function () {
+  return this._intelligence;
+}
+
+JuniorEngineer.prototype.work = function () {
+  Worker.prototype.work.call(this);
+  this._intelligence++;
+}
+
+JuniorEngineer.prototype.isBornGenius = function () {
+  return this._isBornGenius ?? false;
+}
 
 
-
-
-
-
+// TODO: 금요일까지
 /**
  * ## 문제 A - 추가문제
  * 

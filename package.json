@@ -1,5 +1,10 @@
 {
   "private": true,
+  "scripts": {
+    "dev": "yarn workspace chapter1 run dev",
+    "test1": "yarn workspace chapter1 run test:1a",
+    "test2": "yarn workspace chapter1 run test:1a2"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
