@@ -34,9 +34,13 @@ class HardWork {
   }
 
   do() {
-    for (let i = 0; i < this._tasks.length; i++) {
-      this._tasks[i]();
-    }
+    const render = (i) => {
+      if (i === this._tasks.length) return;
+      this._tasks[i]()
+      requestAnimationFrame(() => render(i += 1));
+    };
+
+    render(0);
   }
 
   // do() 이외의 메서드는 수정하지마세요
