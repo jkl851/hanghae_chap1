@@ -9,6 +9,6 @@
 
 ### 2주차
 2. React 파헤치기 
-   1. [React와 유사한 렌더링 시스템 만들기](./packages/chapter1/src/render.js)
-   2. [useState, useMemo 만들기](./packages/chapter1/src/hooks.js)
+   1. [React와 유사한 렌더링 시스템 만들기](./packages/chapter2/src/render.js)
+   2. [useState, useMemo 만들기](./packages/chapter2/src/hooks.js)
    3. [나만의 React 만들기](./packages/chapter2/src/MyReact.js)
